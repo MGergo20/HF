@@ -1,3 +1,4 @@
+import random
 def elso_feladat():
     szam=int(input("Kérlek adj meg egy számot 200 és 920 között"))
     if szam < 200:
@@ -44,3 +45,93 @@ def masodik_feladat():
                                         else:
                                             if ora == 9:
                                                 print("Lassan nem bírjuk tovább! 50%.")
+
+
+def Marti_allapota():
+    nap_neve=str(input("Kérlek add meg a napot, amire kíváncsi vagy!"))
+    óra_neve=str(input("Kérlek add meg az órát, amire kíváncsi vagy!"))
+    if nap_neve == "hétfő":
+        if óra_neve == "programozás":
+            print("alszik")
+        elif óra_neve == "hittan":
+            print("alszik")
+        elif óra_neve == "bármi":
+            print("alszik")
+    elif nap_neve == "kedd":
+        if óra_neve == "hittan":
+            print("figyel")
+        elif óra_neve == "nem hittan":
+            print("alszik")
+        elif óra_neve == "programozás":
+            print("alszik")
+    elif nap_neve == "szerda":
+        if óra_neve == "programozás":
+            print("dolgozik")
+        elif óra_neve == "hittan":
+            print("nincs info!")
+        elif óra_neve == "bármi":
+            print("nincs info!")
+    elif nap_neve == "csütörtök":
+        if óra_neve == "hittan":
+            print("figyel")
+        elif óra_neve == "bármi":
+            print("figyel")
+        elif óra_neve == "programozás":
+            print("figyel")
+    elif nap_neve == "Péntek":
+        if óra_neve == "programozás":
+            print("félig van jelen!")
+        elif óra_neve == "hittan":
+            print("félig van jelen!")
+        elif óra_neve == "bármi":
+            print("félig van jelen!")
+
+
+def gyokvonas():
+    szam:int = -1  
+    while szam < 0:  
+        bekert_szam = int(input("Kérem, adjon meg egy nem negatív egész számot: "))
+        szam = int(bekert_szam)
+        if szam < 0:
+                print("Hiba: Negatív számnak nincs valós négyzetgyöke!")
+        else:
+            print("Hiba: Kérjük, érvényes egész számot adjon meg!")
+    gyok = szam ** 0.5
+    print(f"A {szam} négyzetgyöke: {gyok:.0f}")
+
+def ermedobas():
+        eredmeny_lista=[]
+        i:int=0
+        while(i<10):
+            erem:int=int(random.random()*2) +1
+            if(erem==1):
+                eredmeny_lista.append("Fej")
+            elif(erem==2):
+                eredmeny_lista.append("írás")
+            i+=1
+        return eredmeny_lista
+def fej_dobasok(eredmeny_lista):
+    i:int=0
+    fej:int=0
+
+    while(i<len(eredmeny_lista)):
+        if(eredmeny_lista[i]=="Fej"):
+            fej +=1
+        i+=1
+    return fej
+
+def szam_elemzes():
+    szam = int(input("Adj meg egy számot! "))
+    i = 1  
+    while i <= szam:
+        print(f"Ennyi {i}-es: {szam // i}")  
+        i *= 10  
+
+
+    
+        
+
+
+        
+
+
